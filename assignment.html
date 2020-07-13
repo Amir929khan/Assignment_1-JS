@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>First Assignment</title>
+</head>
+
+<body>
+    <p id="sample"></p>
+    <p id = "demo"></p>
+    <p id="example"></p>
+    
+    <button onclick="display_time_day()">Time & Date</button><br><br>
+    
+    <button onclick="print_content()">Print Content</button><br><br>
+
+    <button onclick="date_format()">Date Format</button>
+
+</body>
+<script type="">
+
+    // 1. display the current time and day format
+    function display_time_day()
+    {
+        var date = new Date();
+        var day = date.getDay(); //returns the integer value 1-7 according to week days 
+        var current_time = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+        if(day == 1)
+        {
+            var week_day = "Monday";
+            document.getElementById("sample").innerHTML ="Today is :"+week_day;
+            document.getElementById("demo").innerHTML ="Current time is : "+current_time;
+        }
+        if(day == 2)
+        {
+            var week_day = "Tuesday";
+            document.getElementById("sample").innerHTML ="Today is :"+week_day;
+            document.getElementById("demo").innerHTML ="Current time is :"+current_time;
+        }
+        if(day ==3)
+        {
+            var week_day = "Wednesday";
+            document.getElementById("sample").innerHTML ="Today is :"+week_day;
+            document.getElementById("demo").innerHTML ="Current time is :"+current_time;
+        }
+        if(day ==4)
+        {
+            var week_day = "Thursday";
+            document.getElementById("sample").innerHTML ="Today is :"+week_day;
+            document.getElementById("demo").innerHTML ="Current time is :"+current_time;
+        }
+        if(day ==5)
+        {
+            var week_day = "Friday";
+            document.getElementById("sample").innerHTML ="Today is :"+week_day;
+            document.getElementById("demo").innerHTML ="Current time is :"+current_time;
+        }
+        if(day == 6)
+        {
+            var week_day = "Saturday";
+            document.getElementById("sample").innerHTML ="Today is :"+week_day;
+            document.getElementById("demo").innerHTML ="Current time is :"+current_time;
+        }
+        if(day == 7)
+        {
+            var week_day = "Sunday";
+            document.getElementById("sample").innerHTML ="Today is :"+week_day;
+            document.getElementById("demo").innerHTML ="Current time is :"+current_time;
+        }
+        
+        
+        
+    }
+   
+    // 2.print the content of current window
+   function print_content()  
+   {
+       window.print();
+   }
+   
+   // 3. display the date formats
+   function date_format() 
+   {
+       var date = new Date();
+       var format_date = date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear();
+       document.getElementById("example").innerHTML = format_date;
+   }
+
+</script>
+
+</html>
